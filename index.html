@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title data-i18n="pageTitle">DayTripLombok — Semeton Tour & Travel</title>
+  <meta name="description" content="DayTripLombok: paket tour Lombok, Rinjani trekking, daily trip, transport, destinasi, blog, dan booking via WhatsApp." />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="loader" id="loader"><div class="loader-card"><img src="assets/logo.jpg" alt="DayTripLombok"><span data-i18n="loading">Loading Lombok Experience...</span></div></div>
+  <header class="site-header" id="header">
+    <a class="brand" href="#home" aria-label="DayTripLombok Home"><img src="assets/logo.jpg" alt="DayTripLombok Logo"><div><strong>DayTripLombok</strong><small>semeton tour & travel</small></div></a>
+    <button class="menu-btn" id="menuBtn" aria-label="Open Menu"><span></span><span></span><span></span></button>
+    <nav class="nav" id="nav">
+      <a href="#home" data-i18n="navHome">Home</a><a href="#tours" data-i18n="navTours">Tours</a><a href="#rinjani" data-i18n="navRinjani">Rinjani</a><a href="#experiences" data-i18n="navExp">Experiences</a><a href="#transport" data-i18n="navTransport">Transport</a><a href="#destinations" data-i18n="navDest">Destinations</a><a href="#gallery" data-i18n="navGallery">Gallery</a><a href="#blog" data-i18n="navBlog">Blog</a><a href="#contact" data-i18n="navContact">Contact</a>
+    </nav>
+    <button class="lang" id="langBtn">EN</button>
+  </header>
+
+  <main>
+    <section id="home" class="hero page-section">
+      <div class="hero-bg"></div><div class="hero-overlay"></div>
+      <div class="hero-content reveal">
+        <p class="eyebrow" data-i18n="heroEyebrow">Lombok Private Tour • Daily Trip • Rinjani Trekking</p>
+        <h1 data-id="heroTitle">Explore Lombok with a modern local travel partner.</h1>
+        <p class="lead" data-id="heroLead">Paket wisata Lombok, Gili, Pink Beach, Rinjani, waterfall, dan transport dengan booking cepat melalui WhatsApp.</p>
+        <div class="hero-actions"><a class="btn primary" href="#tours" data-i18n="viewPackages">Lihat Paket</a><a class="btn ghost" data-wa-id="heroConsult" data-wa="Halo DayTripLombok, saya ingin konsultasi paket wisata Lombok." data-i18n="bookingWa">Booking WhatsApp</a></div>
+        <div class="search-box"><input id="quickSearch" data-i18n-placeholder="searchPlaceholder" placeholder="Cari: Gili, Pink Beach, Rinjani..."/><button id="searchBtn" data-i18n="searchBtn">Search</button></div>
+      </div>
+      <div class="floating-card reveal"><b>4.9★</b><span data-i18n="trusted">Trusted Lombok tour experience</span></div>
+    </section>
+
+    <section class="stats reveal"><div><b data-count="24">0</b><span data-i18n="statPackages">Tour Packages</span></div><div><b data-count="1200">0</b><span data-i18n="statGuests">Happy Guests</span></div><div><b data-count="8">0</b><span data-i18n="statDest">Top Destinations</span></div><div><b data-count="7">0</b><span data-i18n="statSupport">Days Support</span></div></section>
+
+    <section id="tours" class="page-section section">
+      <div class="section-head reveal"><p class="eyebrow" data-i18n="dailyTours">Daily Tours</p><h2 data-i18n="popularTitle">Paket wisata paling populer</h2><p data-i18n="popularDesc">Filter paket, buka detail itinerary, lalu booking langsung ke WhatsApp.</p></div>
+      <div class="filters reveal" id="filters"><button class="active" data-filter="all" data-i18n="filterAll">All</button><button data-filter="beach" data-i18n="filterBeach">Beach</button><button data-filter="culture" data-i18n="filterCulture">Culture</button><button data-filter="adventure" data-i18n="filterAdventure">Adventure</button><button data-filter="family" data-i18n="filterFamily">Family</button></div>
+      <div class="grid cards" id="tourGrid"></div>
+    </section>
+
+    <section id="rinjani" class="page-section split dark">
+      <div class="reveal"><p class="eyebrow" data-i18n="rinjaniEyebrow">Rinjani Trekking</p><h2 data-i18n="rinjaniTitle">Mount Rinjani trekking package</h2><p data-i18n="rinjaniDesc">Program 2D1N, 3D2N, dan private trekking dengan itinerary, porter, guide, camping equipment, dan pickup area tertentu.</p><a class="btn primary" data-wa-id="rinjaniAsk" data-wa="Halo, saya ingin tanya paket Rinjani Trekking DayTripLombok." data-i18n="askRinjani">Ask Rinjani Package</a></div>
+      <div class="image-stack reveal"><img src="assets/photos/rinjani-segara-anak.jpg" alt="Mount Rinjani"><img src="assets/photos/rinjani-caldera.jpg" alt="Camping adventure"></div>
+    </section>
+
+    <section id="experiences" class="page-section section">
+      <div class="section-head reveal"><p class="eyebrow" data-i18n="expEyebrow">Experiences</p><h2 data-i18n="expTitle">Pengalaman Lombok yang bisa dijual</h2></div>
+      <div class="experience-row reveal" id="experienceRow"></div>
+    </section>
+
+    <section id="transport" class="page-section section muted">
+      <div class="section-head reveal"><p class="eyebrow" data-i18n="transportEyebrow">Transport</p><h2 data-i18n="transportTitle">Transport & private driver</h2><p data-i18n="transportDesc">Fitur transport berfungsi untuk request airport transfer, full day car, dan custom route via WhatsApp.</p></div>
+      <div class="transport-card reveal"><img src="assets/logo.jpg" alt="DayTripLombok transport logo"><div><h3 data-i18n="carTitle">Private Car + Driver</h3><p data-i18n="carDesc">Airport pickup, hotel transfer, full day Lombok trip, atau multi-day transport.</p><div class="price" data-i18n="carPrice">Mulai Rp550.000 / day</div><a class="btn primary" data-wa-id="transportBook" data-wa="Halo DayTripLombok, saya ingin booking transport private car Lombok." data-i18n="bookTransport">Book Transport</a></div></div>
+    </section>
+
+    <section id="destinations" class="page-section section">
+      <div class="section-head reveal"><p class="eyebrow" data-i18n="destEyebrow">Destinations</p><h2 data-i18n="destTitle">Destinasi unggulan Lombok</h2></div>
+      <div class="grid destination-grid" id="destinationGrid"></div>
+    </section>
+
+    <section id="gallery" class="page-section section dark-gallery">
+      <div class="section-head reveal"><p class="eyebrow" data-i18n="galleryEyebrow">Gallery</p><h2 data-i18n="galleryTitle">Visual Lombok</h2><p data-i18n="galleryDesc">Klik foto untuk membuka lightbox.</p></div>
+      <div class="masonry reveal" id="galleryGrid"></div>
+    </section>
+
+    <section id="blog" class="page-section section">
+      <div class="section-head reveal"><p class="eyebrow" data-i18n="blogEyebrow">Travel Blog</p><h2 data-i18n="blogTitle">Artikel wisata untuk SEO</h2></div>
+      <div class="grid cards" id="blogGrid"></div>
+    </section>
+
+    <section id="contact" class="page-section contact section">
+      <div class="contact-card reveal"><p class="eyebrow" data-i18n="contactEyebrow">Contact</p><h2 data-i18n="contactTitle">Plan your Lombok trip today</h2><p data-i18n="contactDesc">Isi form ini, tombol submit akan membuka WhatsApp dengan pesan otomatis.</p><form id="contactForm"><input name="name" data-i18n-placeholder="namePlaceholder" placeholder="Nama" required><select name="interest"><option>Gili Islands Tour</option><option>Pink Beach Tour</option><option>Rinjani Trekking</option><option>Transport</option><option>Custom Trip</option></select><textarea name="message" data-i18n-placeholder="messagePlaceholder" placeholder="Tulis kebutuhan tour kamu" required></textarea><button class="btn primary" type="submit" data-i18n="sendWa">Send to WhatsApp</button></form><p class="social">Instagram: <a href="https://www.instagram.com/_daytriplombok/" target="_blank" rel="noreferrer">@_daytriplombok</a></p></div>
+    </section>
+  </main>
+
+  <a class="wa-float" href="https://wa.me/6281947816355" target="_blank" aria-label="WhatsApp">WA</a>
+  <div class="modal" id="modal"><div class="modal-box"><button id="modalClose" class="modal-close">×</button><div id="modalContent"></div></div></div>
+  <div class="toast" id="toast"></div>
+  <footer><img src="assets/logo.jpg" alt="DayTripLombok"><p data-i18n="footerText">© 2026 DayTripLombok — Semeton Tour & Travel. Modern website prototype.</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>
